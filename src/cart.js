@@ -7,9 +7,21 @@ const Cart = () => {
         <div>
               Are you ready to purchase these?
 
-              <ul>
-                {cartItems.map((cartItem) => <li key={cartItem}>{cartItem.name}</li>)}
-              </ul>
+              <div>
+                {cartItems.map((cartItem) => {
+                    return(
+                        <div className="cartItems">
+                            <p key={cartItem}>{cartItem.name}</p>
+                            <p>{cartItem.price} USD</p>
+                        </div>
+                    )
+                })}
+              </div>
+
+              <div className="total">
+                <h2>Total</h2>
+                {cartItems.reduce((previous, current) => parseFloat(previous.price) + parseFloat(current.price)) + " USD"}
+              </div>
         </div>
     )
 };
