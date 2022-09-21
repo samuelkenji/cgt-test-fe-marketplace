@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Astronaut",
+            "price": "10",
+            "picture": "../img/a.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Alien",
+            "price": "30",
+            "picture": "../img/b.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Astronaut",
+            "price": "10",
+            "picture": "../img/a.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Alien",
+            "price": "30",
+            "picture": "../img/b.jpg"
+        }
+    ]
+}
