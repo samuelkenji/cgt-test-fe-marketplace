@@ -1,11 +1,18 @@
-import React from "react";
-import {useParams} from "react-router-dom";
+import React from 'react';
+import {useParams} from 'react-router-dom';
 import catalog from './catalog.json';
 
-const ProductPage = () => {
+const ProductPage = ({cartItems, updateCart}) => {
 
     let params = useParams();
-    let product = catalog.products.find((product) => product.id === params.id)
+    let id = params.id
+    let product = catalog.products.find((product) => product.id === id)
+
+    function addToCart(product){
+        cartItems.push(product)
+        updateCart(cartItems)
+        console.log(cartItems)
+    }
 
     return (
         <div>
@@ -14,7 +21,7 @@ const ProductPage = () => {
             <h1>Product {product.name}</h1>
             <p>Price: {product.price} USD</p>
 
-            <button onClick={() => console.warn('Not implemented!')}>
+            <button onClick={() => updateCart(product)}>
                 Add to cart
             </button>
 
