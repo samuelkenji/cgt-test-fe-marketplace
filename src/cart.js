@@ -8,9 +8,9 @@ const Cart = () => {
               Are you ready to purchase these?
 
               <div>
-                {cartItems.map((cartItem) => {
+                {cartItems.map((cartItem, index) => {
                     return(
-                        <div className="cartItems">
+                        <div key={'item_'+index} className="cartItems">
                             <p key={cartItem}>{cartItem.name}</p>
                             <p>{cartItem.price} USD</p>
                         </div>
@@ -20,7 +20,7 @@ const Cart = () => {
 
               <div className="total">
                 <h2>Total</h2>
-                {cartItems.reduce((previous, current) => parseFloat(previous.price) + parseFloat(current.price)) + " USD"}
+                {cartItems.reduce((sum, current) => sum += parseFloat(current.price), 0) + " USD"}
               </div>
         </div>
     )

@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
-import { Route, Routes, BrowserRouter, Link } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import ProductPage from './productPage';
-import Product from './product';
-import catalog from './catalog.json';
 import Home from './home';
 import Cart from './cart';
 
 import './styles/main.css';
 import { useEffect } from 'react';
-
-/* function cartItems() {
-  return []
-} */
 
 function App() {
   const [cartItems, setCartItems] = useState(null)
@@ -31,7 +25,6 @@ function App() {
         setCartItems(newItem)
       }
     }
-    console.log(cartItems)
   };
 
   useEffect(() => {
@@ -40,11 +33,9 @@ function App() {
     }else{
       if(localStorage.getItem('cart') !== null){
         let storage = JSON.parse(localStorage.getItem('cart'))
-        console.log(storage)
         updateCart(storage, true)
       }
     }
-    console.log(cartItems)
   }, [cartItems])
 
   return (
@@ -65,19 +56,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/products/:id' element={<ProductPage cartItems={cartItems} updateCart={updateCart} />}/>
-          {<Route path='/cart' element={<Cart/>}/>}
+          <Route path='/cart' element={<Cart/>}/>
         </Routes>
-        {/* {
-          window.location.pathname === '/cart' && (
-            <div>
-              Are you ready to purchase these?
-
-              <ul>
-                {cartItems().map((cartItem) => <li key={cartItem}>{cartItem}</li>)}
-              </ul>
-            </div>
-          )
-        } */}
       </main>
     </BrowserRouter>
   );

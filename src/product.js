@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
 const Product = ({id, name, price, picture}) => {
-
     return (
         <div className="product">
-            <img src={picture} width={640}/>
+            <img src={picture} width={640} alt="Product"/>
 
             <div className="product-info">
                 <div>
@@ -14,7 +12,6 @@ const Product = ({id, name, price, picture}) => {
                 </div>
 
                 <a href={"/products/" + id}>Go to product</a>
-                {/* <Link to={'products/' + id}/> */}
             </div>
 
         </div> 
