@@ -4,7 +4,7 @@ import ProductPage from './productPage';
 import Home from './home';
 import Cart from './cart';
 
-import './styles/main.css';
+import './styles/home.css';
 import { useEffect } from 'react';
 
 function App() {
