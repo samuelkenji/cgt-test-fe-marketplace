@@ -5,6 +5,7 @@ import Home from './home';
 import Cart from './cart';
 
 import './styles/home.css';
+import './styles/main.css';
 import {FaShoppingCart} from 'react-icons/fa';
 
 function App() {
@@ -52,7 +53,6 @@ function App() {
               <a href="/">3D Shop</a>
               <a href="/cart"><FaShoppingCart/> ({cartItems ? cartItems.length : 0})</a>
           </nav>
-          <hr/>
         </header>
 
         <Routes>
