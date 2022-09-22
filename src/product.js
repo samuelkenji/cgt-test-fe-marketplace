@@ -8,10 +8,10 @@ const Product = ({id, name, price, picture}) => {
             <div className="product-info">
                 <div>
                     <h3>{name}</h3>
-                    <p>Price: {price} USD</p>
+                    <p>${price}</p>
                 </div>
 
-                <a href={"/products/" + id}>Go to product</a>
+                <button><a href={"/products/" + id}>Go to product</a></button>
             </div>
 
         </div> 

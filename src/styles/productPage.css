@@ -1,0 +1,39 @@
+.product-page {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.product-page p {
+    text-align: justify;
+}
+
+.product-page img {
+    width: 400px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+}
+
+.product-price svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
