@@ -1,5 +1,5 @@
 import {FaTrashAlt} from 'react-icons/fa';
-import './styles/cart.css'
+import '../styles/cart.css'
 
 
 const Cart = ({removeFromCart}) => {

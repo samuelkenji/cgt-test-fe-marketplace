@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import ProductPage from './productPage';
-import Home from './home';
-import Cart from './cart';
+import ProductPage from './components/productPage';
+import Home from './components/home';
+import Cart from './components/cart';
 
 import './styles/home.css';
 import './styles/main.css';

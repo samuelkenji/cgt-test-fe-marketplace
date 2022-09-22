@@ -1,6 +1,6 @@
 import React from "react";
-import Product from "./product";
-import catalog from './catalog.json';
+import Product from "../components/product";
+import catalog from '../catalog.json';
 
 const Home = () => {
     return (

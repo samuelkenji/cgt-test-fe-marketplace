@@ -1,9 +1,9 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import catalog from './catalog.json';
+import catalog from '../catalog.json';
 import {FaShoppingCart} from 'react-icons/fa'
 
-import './styles/productPage.css'
+import '../styles/productPage.css'
 
 const ProductPage = ({addToCart}) => {
 
