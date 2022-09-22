@@ -12,6 +12,16 @@ header a {
     color: white;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
 .home {
     display: flex;
     flex-wrap: wrap;

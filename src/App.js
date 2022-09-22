@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import ProductPage from './productPage';
 import Home from './home';
 import Cart from './cart';
 
 import './styles/home.css';
-import { useEffect } from 'react';
+import {FaShoppingCart} from 'react-icons/fa';
 
 function App() {
   const [cartItems, setCartItems] = useState(null)
@@ -48,13 +48,9 @@ function App() {
     <BrowserRouter>
       <main>
         <header>
-          90s shop
           <nav>
-            <ul style={{listStyleType: 'none', display: 'flex'}}>
-              <li><a href="/">Home</a></li>
-              |
-              <li><a href="/cart">Cart ({cartItems ? cartItems.length : 0})</a></li>
-            </ul>
+              <a href="/">3D Shop</a>
+              <a href="/cart"><FaShoppingCart/> ({cartItems ? cartItems.length : 0})</a>
           </nav>
           <hr/>
         </header>
