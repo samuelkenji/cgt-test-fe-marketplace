@@ -10,8 +10,7 @@ import { useEffect } from 'react';
 function App() {
   const [cartItems, setCartItems] = useState(null)
   
-  const updateCart = (newItem, hasStorage) => {
-    
+  function addToCart(newItem, hasStorage){
     if(cartItems){
       let newCart = [...cartItems] //Using spread so state actually changes
       newCart.push(newItem)
@@ -27,13 +26,20 @@ function App() {
     }
   };
 
+  function removeFromCart(index){
+      let storage = JSON.parse(localStorage.getItem('cart'))
+      storage.splice(index, 1)
+      localStorage.setItem('cart', JSON.stringify(storage))
+      setCartItems(storage) 
+  }
+
   useEffect(() => {
     if(cartItems){
       localStorage.setItem('cart', JSON.stringify([...cartItems]))
     }else{
       if(localStorage.getItem('cart') !== null){
         let storage = JSON.parse(localStorage.getItem('cart'))
-        updateCart(storage, true)
+        addToCart(storage, true)
       }
     }
   }, [cartItems])
@@ -55,8 +61,8 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/products/:id' element={<ProductPage cartItems={cartItems} updateCart={updateCart} />}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/products/:id' element={<ProductPage addToCart={addToCart} />}/>
+          <Route path='/cart' element={<Cart removeFromCart={removeFromCart}/>}/>
         </Routes>
       </main>
     </BrowserRouter>

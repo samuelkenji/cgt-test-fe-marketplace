@@ -3,7 +3,7 @@
         {
             "id": "1",
             "name": "Astronaut",
-            "price": "10",
+            "price": "1000",
             "picture": "../img/a.jpg"
         },
         {
