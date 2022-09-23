@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin: 50px;
 }
 
 .product-page p {
@@ -10,12 +10,13 @@
 }
 
 .product-page img {
-    width: 400px;
+    width: auto;
 }
 
 .info {
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 400px;
 }
 
