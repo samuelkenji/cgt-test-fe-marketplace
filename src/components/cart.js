@@ -3,7 +3,6 @@ import '../styles/cart.css'
 
 const Cart = ({removeFromCart}) => {
     let cartItems = JSON.parse(localStorage.getItem('cart'))
-    console.log(cartItems)
     return (
         <div className='cart'>
             {!cartItems ? <h2>No products inside the cart</h2> :

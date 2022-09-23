@@ -1,6 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Cart from '../Cart';
-import App, { removeFromCart } from '../../App';
+import { removeFromCart } from '../../App';
 
 describe("Remove item from cart", () => {
     test('renders cart', () => {
@@ -9,7 +9,7 @@ describe("Remove item from cart", () => {
         expect(total).toBeInTheDocument();
     });
 
-    /* test('removes item from cart', () => {
+    test('removes item from cart', () => {
         render(<Cart removeFromCart={removeFromCart}/>)
         const cartItems = JSON.parse(localStorage.getItem('cart'))
         if(!cartItems || cartItems.length === 0){
@@ -20,5 +20,5 @@ describe("Remove item from cart", () => {
             expect(text).toBeInTheDocument();
         }
         
-    }); */
+    });
 })
