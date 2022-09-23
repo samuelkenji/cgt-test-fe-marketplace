@@ -2,7 +2,7 @@ import React from "react";
 
 const Product = ({id, name, price, picture}) => {
     return (
-        <div className="product">
+        <div id={"product_"+id} className="product">
             <img src={picture} width={640} alt="Product"/>
 
             <div className="product-info">

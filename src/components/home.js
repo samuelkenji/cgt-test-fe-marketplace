@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../components/product";
+import Product from "./Product";
 import catalog from '../catalog.json';
 
 const Home = () => {

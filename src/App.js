@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import ProductPage from './components/productPage';
-import Home from './components/home';
-import Cart from './components/cart';
+import ProductPage from './components/ProductPage';
+import Home from './components/Home';
+import Cart from './components/Cart';
 
 import './styles/home.css';
 import './styles/main.css';
@@ -51,7 +51,7 @@ function App() {
         <header>
           <nav>
               <a href="/">3D Shop</a>
-              <a href="/cart"><FaShoppingCart/> ({cartItems ? cartItems.length : 0})</a>
+              <a href="/cart"> <FaShoppingCart/><span>({cartItems ? cartItems.length : 0})</span> </a>
           </nav>
         </header>
 

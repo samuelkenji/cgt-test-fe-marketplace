@@ -24,7 +24,7 @@ const ProductPage = ({addToCart}) => {
                 <span></span>
                 <div className="product-buy">
                     <h2>${product.price}</h2>
-                    <FaShoppingCart onClick={() => addToCart(product)} />
+                    <FaShoppingCart data-testid="cart" onClick={() => addToCart(product)} />
                 </div>
             </div>
 
